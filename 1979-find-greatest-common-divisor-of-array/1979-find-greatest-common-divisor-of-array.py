@@ -4,13 +4,19 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        gcd=1
-        for i in range(max(nums),1,-1):
-            if min(nums)%i==0 and max(nums)%i==0:
-                gcd=i
-                break
-        return gcd
-
+        mn=min(nums)
+        mx=max(nums)
+        def gcd(mn,mx):
+            while(mn>0 and mx>0):
+                if mn>mx:
+                    mn=mn%mx
+                else:
+                    mx=mx%mn
+            if mn==0:
+                return mx
+            else:
+                return mn
+        return gcd(mn,mx)
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
