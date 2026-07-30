@@ -5,8 +5,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-      
-        return sorted(s) == sorted(t)
+        return sorted(s)==sorted(t)
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
